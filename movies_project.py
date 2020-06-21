@@ -61,8 +61,8 @@ def maximum_rating(csv):
 ax = maximum_rating(base)
 
 # Agregate the movies by the maximum rating
-rating = base.groupby("RATING")
-maximum_rating_movies = rating.get_group(5)
+ratings = base.groupby("RATING")
+maximum_rating_movies = ratings.get_group(5)
 
 # Building the graph of release year distribution of the maximum rating movies
 scatter = sns.scatterplot(x=maximum_rating_movies["YEAR"], y=maximum_rating_movies["MOVIE"],
