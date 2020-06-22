@@ -20,10 +20,13 @@ rating_boxplot = sns.boxplot(y=base["RATING"], color="royalblue", medianprops={
                              "color": "red", "linestyle": "--"}).set_title("Ratings Distribution")
 
 # Finding the outliers movies
+
+
 def minimum_rating(csv):
     for index, row in csv.iterrows():
         if row["RATING"] == 1:
             print(row["MOVIE"], row["YEAR"])
+
 
 minimum_rating(base)
 
@@ -53,10 +56,13 @@ year_box = sns.boxplot(y=most_watched["RATING"], color="palegreen", medianprops=
                        "color": "darkblue", "linestyle": "--"}).set_title("Ratings of 2017 Movies")
 
 # Maximum rating movies and distribution
+
+
 def maximum_rating(csv):
     for index, row in csv.iterrows():
         if row["RATING"] == 5:
             print(row["MOVIE"], row["YEAR"])
+
 
 ax = maximum_rating(base)
 
